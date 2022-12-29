@@ -39,18 +39,12 @@ const Booking = () => {
 
         console.log(info);
 
-        // axios.post(`https://hospisearch-server-production.up.railway.app/init`, info)
-        //     .then(res => {
-        //         if (res?.data) {
-        //             window.location = res?.data
-        //         }
-        //     })
-
-        // ------------------------------------
-
-        // if (urlData?.data) {
-        //   window.location.href = urlData?.data
-        // }
+        axios.post(`https://hospisearch-server-production.up.railway.app/init`, info)
+            .then(res => {
+                if (res?.data) {
+                    window.location = res?.data
+                }
+            })
 
     };
 
@@ -58,7 +52,7 @@ const Booking = () => {
         <div className='flex flex-col py-10 gap-7 px-4'>
             <div className='flex flex-col md:flex-row p-2 rounded justify-between align-middle shadow-md px-12 my-auto'>
                 <img className='h-28 rounded' src={singleData?.img} alt=" " />
-                <div style={{fontFamily:"Rajdhani"}} className='my-auto text-2xl font-bold flex flex-col gap-2'>
+                <div style={{ fontFamily: "Rajdhani" }} className='my-auto text-2xl font-bold flex flex-col gap-2'>
                     <h4>{singleData?.name}</h4>
                     <p>${singleData?.price}/Month</p>
                 </div>
@@ -69,7 +63,7 @@ const Booking = () => {
                         className='input focus:outline-none input-bordered w-4/5' type="text" name="quantity" id="quantity" />
                 </div>
                 <div className='my-auto'>
-                    <h4 style={{fontFamily:"Rajdhani"}} className='text-cyan-500 text-xl font-bold'>${totalPrice ? singleData?.price * totalPrice : singleData?.price}</h4>
+                    <h4 style={{ fontFamily: "Rajdhani" }} className='text-cyan-500 text-xl font-bold'>${totalPrice ? singleData?.price * totalPrice : singleData?.price}</h4>
                 </div>
             </div>
             <div className='w-full mx-auto'>

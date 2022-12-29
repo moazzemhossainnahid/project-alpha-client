@@ -1,9 +1,13 @@
+import { signOut } from 'firebase/auth';
 import React, { useEffect, useState } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link, NavLink } from 'react-router-dom';
 import { Navigation } from '../../../Data/NavbarData';
+import auth from '../../../Firebase/firebase.init';
 
 const Navbar = () => {
     const [bg, setBg] = useState(false);
+    const [user] = useAuthState(auth);
 
     // console.log(myAccount);
 
@@ -12,10 +16,15 @@ const Navbar = () => {
             return window.scrollY > 50 ? setBg(true) : setBg(false);
         });
     });
+
+    
+  const signout = () => {
+    signOut(auth);
+  };
+
     return (
-        <div className={`${
-            bg ? "bg-indigo-500 h-16 m-0 p-0 w-full shadow-sm" : "text-black"
-          } flex items-center app__navbar fixed top-0 w-full text-dark z-50 transition-all duration-300`}>
+        <div className={`${bg ? "bg-indigo-500 h-16 m-0 p-0 w-full shadow-sm" : "text-black"
+            } flex items-center app__navbar fixed top-0 w-full text-dark z-50 transition-all duration-300`}>
             <div className="navbar bg-indigo-500 text-white">
                 <div className="navbar-start">
 
@@ -42,9 +51,13 @@ const Navbar = () => {
                                                 className="flex rounded px-4 items-center py-2 text-sm text-white hover:bg-gray-100 hover:text-neutral focus:bg-gray-700 focus:text-white focus:outline-none transition duration-150 ease-in-out"
                                             > {item.name} </NavLink>
                                         </li>
+
                                     )
                                 })
                             }
+
+                            <li className=' text-white text-xl mx-2 font-semibold cursor-pointer'>{user ? <button className="flex rounded px-4 items-center py-2 text-sm text-white hover:bg-gray-100 hover:text-neutral focus:bg-gray-700 focus:text-white focus:outline-none transition duration-150 ease-in-out" onClick={signout}>Sign Out</button> :
+                                <NavLink className="flex rounded px-4 items-center py-2 text-sm text-white hover:bg-gray-100 hover:text-neutral focus:bg-gray-700 focus:text-white focus:outline-none transition duration-150 ease-in-out" to='/signin'>Sign In</NavLink>}</li>
                         </ul>
                     </div>
                     <div className="navbar-end">
