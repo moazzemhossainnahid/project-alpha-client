@@ -60,7 +60,7 @@ const Booking = () => {
                 <img className='h-28 rounded' src={singleData?.img} alt=" " />
                 <div style={{fontFamily:"Rajdhani"}} className='my-auto text-2xl font-bold flex flex-col gap-2'>
                     <h4>{singleData?.name}</h4>
-                    <p>${singleData?.price}</p>
+                    <p>${singleData?.price}/Month</p>
                 </div>
                 <div className='my-auto'>
                     <input onChange={handleInputValue}
