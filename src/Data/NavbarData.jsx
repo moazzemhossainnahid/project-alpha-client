@@ -9,10 +9,10 @@ export const Navigation = [
     },
     {
         name: "About US",
-        href: "/aboutus"
+        href: "/about"
     },
     {
         name: "Contact US",
-        href: "/contactus"
+        href: "/contact"
     },
 ]
