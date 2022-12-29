@@ -1,9 +1,14 @@
 import React from 'react';
+import Banner from '../Components/Banner';
+import Review from '../Components/Review';
+import Team from '../Components/Team';
 
 const Home = () => {
     return (
         <div className='w-full h-full items-center justify-center'>
-            <h2 className="text-5xl text-rose-600 font-bold">This is Home Page</h2>
+           <Banner></Banner>
+           <Team></Team>
+            <Review></Review>
         </div>
     );
 };
