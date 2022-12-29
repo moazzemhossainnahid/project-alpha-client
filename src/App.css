@@ -7,6 +7,15 @@
   pointer-events: none;
 }
 
+.logo{
+  color: #124b66;
+  font-style: Century;
+  font-size: 35px;
+  font-family: Arial;
+  float: right;
+  margin-top: 5px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
