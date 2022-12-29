@@ -2,7 +2,7 @@ import { signOut } from 'firebase/auth';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Navigate, useLocation } from 'react-router-dom';
-import auth from '../firebase.init';
+import auth from '../Firebase/firebase.init';
 import Loading from './Loading';
 
 
@@ -16,7 +16,7 @@ const RequireAuth = ({ children }) => {
 
     if (!user) {
         signOut(auth);
-        return <Navigate to='/login' state={{ from: location }} replace />
+        return <Navigate to='/signin' state={{ from: location }} replace />
     }
 
 

@@ -48,7 +48,7 @@ const SignIn = () => {
                             <label className="label">
                                 <span className="label-text text-white">Email</span>
                             </label>
-                            <input type="email" placeholder="Type Your Email" className="input input-bordered w-full max-w-xs"
+                            <input type="email" placeholder="Type Your Email" className="input placeholder:text-gray-400 text-gray-500 input-bordered w-full max-w-xs"
                                 {...register("email", {
                                     required: {
                                         value: true,
@@ -69,7 +69,7 @@ const SignIn = () => {
                             <label className="label">
                                 <span className="label-text text-white">Password</span>
                             </label>
-                            <input type="password" placeholder="Type Your Password" className="input input-bordered w-full max-w-xs"
+                            <input type="password" placeholder="Type Your Password" className="input placeholder:text-gray-400 text-gray-500 input-bordered w-full max-w-xs"
                                 {...register("password", {
                                     required: {
                                         value: true,

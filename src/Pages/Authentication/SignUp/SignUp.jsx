@@ -1,7 +1,7 @@
 import React from 'react';
 import { useCreateUserWithEmailAndPassword, useSignInWithGoogle, useUpdateProfile } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import Loading from '../../../Components/Loading';
 import auth from '../../../Firebase/firebase.init';
 
@@ -17,7 +17,11 @@ const SignUp = () => {
 
       const [updateProfile, updating, updateError] = useUpdateProfile(auth);
 
-      const navigate = useNavigate();
+      const navigate =useNavigate();
+      const location = useLocation();
+      
+      let from = location.state?.from?.pathname || "/";
+
     let signInError;
 
     if (loading || gloading || updating) {
@@ -29,15 +33,15 @@ const SignUp = () => {
     }
 
     if (user || guser) {
-        console.log(user || guser);
+        navigate(from, { replace: true });
     }
 
     const onSubmit = async data => {
         console.log(data);
         await createUserWithEmailAndPassword(data.email, data.password);
         await updateProfile({ displayName: data.name });
-        console.log('update done');
-        navigate('/purchase');
+        // console.log('update done');
+        navigate('/');
     }
     return (
         <div className='flex h-screen justify-center items-center'>
@@ -50,7 +54,7 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text text-white">Name</span>
                             </label>
-                            <input type="text" placeholder="Type Your Name" className="input input-bordered w-full max-w-xs"
+                            <input type="text" placeholder="Type Your Name" className="input placeholder:text-gray-400 text-gray-500 input-bordered w-full max-w-xs"
                                 {...register("name", {
                                     required: {
                                         value: true,
@@ -66,7 +70,7 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text text-white">Email</span>
                             </label>
-                            <input type="email" placeholder="Type Your Email" className="input input-bordered w-full max-w-xs"
+                            <input type="email" placeholder="Type Your Email" className="input placeholder:text-gray-400 text-gray-500 input-bordered w-full max-w-xs"
                                 {...register("email", {
                                     required: {
                                         value: true,
@@ -87,7 +91,7 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text text-white">Password</span>
                             </label>
-                            <input type="password" placeholder="Type Your Password" className="input input-bordered w-full max-w-xs"
+                            <input type="password" placeholder="Type Your Password" className="input placeholder:text-gray-400 text-gray-500 input-bordered w-full max-w-xs"
                                 {...register("password", {
                                     required: {
                                         value: true,

@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import RequireAuth from './Components/RequireAuth';
 import About from './Pages/About/About';
 import SignIn from './Pages/Authentication/SignIn/SignIn';
 import SignUp from './Pages/Authentication/SignUp/SignUp';
@@ -19,7 +20,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/services' element={<Services />} />
-        <Route path='/booking/:id' element={<Booking />} />
+        <Route path='/booking/:id' element={<RequireAuth><Booking /></RequireAuth>} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/signin' element={<SignIn />} />
         <Route path='/signup' element={<SignUp />} />
