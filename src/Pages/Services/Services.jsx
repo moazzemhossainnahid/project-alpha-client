@@ -1,9 +1,10 @@
 import React from 'react';
+import ServicesHero from './ServicesHero';
 
 const Services = () => {
     return (
-        <div>
-            
+        <div className='h-full w-full'>
+            <ServicesHero/>
         </div>
     );
 };
