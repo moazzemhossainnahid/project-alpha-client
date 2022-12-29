@@ -41,14 +41,14 @@ const SignUp = () => {
     }
     return (
         <div className='flex h-screen justify-center items-center'>
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card w-96 bg-gray-600 text-white shadow-xl">
                 <div className="card-body">
                     <h2 className="text-center text-2xl font-bold">Sign Up</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
 
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text">Name</span>
+                                <span className="label-text text-white">Name</span>
                             </label>
                             <input type="text" placeholder="Type Your Name" className="input input-bordered w-full max-w-xs"
                                 {...register("name", {
@@ -64,7 +64,7 @@ const SignUp = () => {
 
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="label-text text-white">Email</span>
                             </label>
                             <input type="email" placeholder="Type Your Email" className="input input-bordered w-full max-w-xs"
                                 {...register("email", {
@@ -85,7 +85,7 @@ const SignUp = () => {
 
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text">Password</span>
+                                <span className="label-text text-white">Password</span>
                             </label>
                             <input type="password" placeholder="Type Your Password" className="input input-bordered w-full max-w-xs"
                                 {...register("password", {
@@ -108,7 +108,7 @@ const SignUp = () => {
                         <input className='btn w-full max-w-xs' type="submit" value="SIGN Up" />
                     </form>
 
-                    <p className='text-sm'>Already have an account? <Link className='text-secondary' to="/signin">Please Signin</Link></p>
+                    <p className='text-sm'>Already have an account? <Link className='text-accent' to="/signin">Please Signin</Link></p>
                     <div className="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}

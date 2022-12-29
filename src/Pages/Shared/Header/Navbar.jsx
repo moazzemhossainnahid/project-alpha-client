@@ -9,7 +9,6 @@ const Navbar = () => {
     const [bg, setBg] = useState(false);
     const [user] = useAuthState(auth);
 
-    // console.log(myAccount);
 
     useEffect(() => {
         window.addEventListener('scroll', () => {
