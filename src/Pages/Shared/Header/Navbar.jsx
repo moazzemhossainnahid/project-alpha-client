@@ -13,7 +13,9 @@ const Navbar = () => {
         });
     });
     return (
-        <div className='h-full w-full'>
+        <div className={`${
+            bg ? "bg-indigo-500 h-16 m-0 p-0 w-full shadow-sm" : "text-black"
+          } flex items-center app__navbar fixed top-0 w-full text-dark z-50 transition-all duration-300`}>
             <div className="navbar bg-indigo-500 text-white">
                 <div className="navbar-start">
 
@@ -62,7 +64,7 @@ const Navbar = () => {
                                                     smooth={true}
                                                     duration={500}
                                                     offset={-70}
-                                                    className="flex rounded px-4 items-center py-2 text-sm text-white hover:bg-gray-100 hover:text-neutral focus:bg-gray-700 focus:text-white focus:outline-none transition duration-150 ease-in-out"
+                                                    className="flex rounded px-4 items-center py-2 text-sm text-neutral hover:bg-gray-100 hover:text-neutral focus:bg-gray-700 focus:text-white focus:outline-none transition duration-150 ease-in-out"
                                                 > {item.name} </NavLink>
                                             </li>
                                         )
