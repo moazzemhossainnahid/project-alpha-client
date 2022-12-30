@@ -1,15 +1,11 @@
 import React, { useRef, useState } from 'react';
-import Animation from './Animation';
-import emailjs from '@emailjs/browser';
-import { toast } from 'react-toastify';
-import swal from 'sweetalert';
 
 
 const BecomeWorker = () => {
 
     const [pending, setPending] = useState(false);
 
-    
+
     const form = useRef();
 
     const sendEmail = (e) => {
@@ -18,24 +14,15 @@ const BecomeWorker = () => {
 
 
         const data = {
-            name : e.target.name.value,
-            email : e.target.email.value,
-            message : e.target.message.value,
-            subject : e.target.subject.value
+            name: e.target.name.value,
+            email: e.target.email.value,
+            message: e.target.phone.value,
+            expert: e.target.expert.value,
+            place: e.target.place.value,
         }
 
-        emailjs.send('service_isw7suz', 'template_mcak73j', data, '3Ia_oLKOBiLv_2B3T')
-            .then((result) => {
-                // console.log(result);
-                if (result?.text) {
-                    toast.success("Successfull", "You Send an Email!", "success");
-                    e.target.reset();
-                    setPending(false);
-                }
-            }, (error) => {
-                swal("OPPSS...", "Email not Send!", "error");
-                setPending(false);
-            });
+        console.log(data);
+
 
 
     };
@@ -43,37 +30,61 @@ const BecomeWorker = () => {
     return (
         <div>
             <div style={{
-                backgroundImage: "url(https://edusphere.radiantthemes.com/wp-content/uploads/2020/08/contact-banner.jpg)"
-            }} className="bg-cover  bg-no-repeat lg:h-[500px] h-40 lg:z-0">
+                backgroundImage: "url(https://img.freepik.com/free-vector/recruiting-professionals-studying-candidate-profiles_1262-21404.jpg?w=2000)"
+            }} className="bg-cover object-cover bg-no-repeat lg:h-96 h-40 lg:z-0">
             </div>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-20 lg:mx-44 lg:my-24 my-5 p-5'>
                 <div>
-                    <h4 className=' text-lg uppercase font-bold text-[#015ABD] mb-3'>contact us</h4>
-                    <Animation></Animation>
-                    <h2 className=' text-4xl font-semibold my-6'>Are You Interested to be an Worker ? Contact Us.</h2>
-                    <p className='mb-4 w-3/4'>Contact our top-notch worklist in the BD that has huge expertise in providing futuristic solutions to all aspiring workers.</p>
-
-                    <img src="https://edusphere.radiantthemes.com/wp-content/uploads/2020/06/Signeture-1.png" alt="" />
-                    <h5 className=' font-semibold'>Brayden Backham</h5>
-                    <p>Director</p>
+                    <img className='object-cover' src="https://img.freepik.com/free-psd/flat-design-we-are-hiring-template_23-2149698070.jpg?w=740&t=st=1672427963~exp=1672428563~hmac=9f21fca98e14aad4c870c9adfbb0fb9e5ed7d54deaaf51bd46a0a5fb04cbfcac" alt="" />
                 </div>
                 <div className=' px-12 pt-10 pb-5 shadow-lg text-[#222222] lg:mt-[-220px] lg:z-40 bg-white'>
                     <h2 className=' text-4xl font-semibold mb-4'>Fill Out For Apply as Worker</h2>
                     <p>Fill-in the contact form and get immediate assistance from our educational consultant.</p>
-                    <form ref={form} onSubmit={sendEmail} >
-                        <input name="name" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] my-5' type="text" id="" placeholder="Your Name" />
 
-                        <input name="email" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] mb-5' type="email" id="" placeholder="Email address" />
+                <form ref={form} onSubmit={sendEmail} >
+                    <select name="expert" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] my-5' type="text" id="" placeholder="Your Name">
+                        <option disabled selected class="place">Select Your Expert in</option>
+                        <option class="place">Maid</option>
+                        <option class="place">Nurse</option>
+                        <option class="place">Governess</option>
+                        <option class="place">Cook</option>
+                        <option class="place">Babysitter</option>
+                        <option class="place">Driver</option>
+                        <option class="place">Laborer</option>
+                        <option class="place">Builder</option>
+                        <option class="place">Painter</option>
+                        <option class="place">Electrician </option>
+                        <option class="place">Carpenter(কাঠমিস্ত্রি)</option>
+                        <option class="place">Plumber</option>
+                        <option class="place">Night Guard</option>
 
-                        <input name="subject" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] mb-5' type="text" id="" placeholder="Subject" />
 
-                        <textarea name="message" className=' block w-full h-32 resize-none pl-2 border-2 border-[#d8dada] mb-5' type="text" id="" placeholder="Your message" />
+                    </select>
+                    <select name="place" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] my-5' type="text" id="" placeholder="Your Name">
+                    <option disabled selected class="place">Select Your Place</option>
+                            <option class="place">Dhanmondi</option>
+                            <option class="place">Kolabagan</option>
+                            <option class="place">Uttra</option>
+                            <option class="place">Mohammadpur</option>
+                            <option class="place">Shamoli</option>
+                            <option class="place">Kayllanpur</option>
+                            <option class="place">Gulshan</option>
+                            <option class="place">Bonani</option>
 
-                        <input disabled={pending ? true : false} className=' block h-10 px-7 bg-[#015abd] text-white cursor-pointer uppercase my-4' type="submit" value="Send now" />
-                    </form>
-                </div>
+
+                    </select>
+
+                    <input name="name" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] my-5' type="text" id="" placeholder="Your Name" />
+
+                    <input name="email" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] mb-5' type="email" id="" placeholder="Email address" />
+
+                    <input name="phone" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] mb-5' type="text" id="" placeholder="Enter Your Phone" />
+
+                    <input disabled={pending ? true : false} className=' block h-10 px-7 bg-[#015abd] text-white cursor-pointer uppercase my-4' type="submit" value="Apply for Join" />
+                </form>
             </div>
         </div>
+        </div >
     );
 };
 
