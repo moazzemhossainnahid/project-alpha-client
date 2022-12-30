@@ -1,4 +1,6 @@
 import React, { useRef, useState } from 'react';
+import swal from 'sweetalert';
+import primaryAxios from '../../Hooks/primaryAxios';
 
 
 const BecomeWorker = () => {
@@ -13,7 +15,7 @@ const BecomeWorker = () => {
         setPending(true);
 
 
-        const data = {
+        const info = {
             name: e.target.name.value,
             email: e.target.email.value,
             message: e.target.phone.value,
@@ -21,7 +23,33 @@ const BecomeWorker = () => {
             place: e.target.place.value,
         }
 
-        console.log(data);
+        console.log(info);
+
+        swal({
+            title: "Are you sure?",
+            text: "Once Send, you will not be able to recover this imaginary data!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        }).then((willDelete) => {
+            if (willDelete) {
+                (async () => {
+                    const { data } = await primaryAxios.post(`/apply`, info);
+                    // console.log(data);
+                    if (data?.insertedId) {
+                        swal("The Information has been successfully Saved", {
+                            icon: "success",
+                            className: "rounded-xl",
+                        });
+
+                        e.target.reset();
+                        // window.location.href = "/";
+                    }
+                })();
+            } else {
+                swal("Your imaginary file is safe!");
+            }
+        })
 
 
 
@@ -41,27 +69,27 @@ const BecomeWorker = () => {
                     <h2 className=' text-4xl font-semibold mb-4'>Fill Out For Apply as Worker</h2>
                     <p>Fill-in the contact form and get immediate assistance from our educational consultant.</p>
 
-                <form ref={form} onSubmit={sendEmail} >
-                    <select name="expert" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] my-5' type="text" id="" placeholder="Your Name">
-                        <option disabled selected class="place">Select Your Expert in</option>
-                        <option class="place">Maid</option>
-                        <option class="place">Nurse</option>
-                        <option class="place">Governess</option>
-                        <option class="place">Cook</option>
-                        <option class="place">Babysitter</option>
-                        <option class="place">Driver</option>
-                        <option class="place">Laborer</option>
-                        <option class="place">Builder</option>
-                        <option class="place">Painter</option>
-                        <option class="place">Electrician </option>
-                        <option class="place">Carpenter(কাঠমিস্ত্রি)</option>
-                        <option class="place">Plumber</option>
-                        <option class="place">Night Guard</option>
+                    <form ref={form} onSubmit={sendEmail} >
+                        <select name="expert" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] my-5' type="text" id="" placeholder="Your Name">
+                            <option disabled selected class="place">Select Your Expert in</option>
+                            <option class="place">Maid</option>
+                            <option class="place">Nurse</option>
+                            <option class="place">Governess</option>
+                            <option class="place">Cook</option>
+                            <option class="place">Babysitter</option>
+                            <option class="place">Driver</option>
+                            <option class="place">Laborer</option>
+                            <option class="place">Builder</option>
+                            <option class="place">Painter</option>
+                            <option class="place">Electrician </option>
+                            <option class="place">Carpenter(কাঠমিস্ত্রি)</option>
+                            <option class="place">Plumber</option>
+                            <option class="place">Night Guard</option>
 
 
-                    </select>
-                    <select name="place" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] my-5' type="text" id="" placeholder="Your Name">
-                    <option disabled selected class="place">Select Your Place</option>
+                        </select>
+                        <select name="place" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] my-5' type="text" id="" placeholder="Your Name">
+                            <option disabled selected class="place">Select Your Place</option>
                             <option class="place">Dhanmondi</option>
                             <option class="place">Kolabagan</option>
                             <option class="place">Uttra</option>
@@ -72,18 +100,18 @@ const BecomeWorker = () => {
                             <option class="place">Bonani</option>
 
 
-                    </select>
+                        </select>
 
-                    <input name="name" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] my-5' type="text" id="" placeholder="Your Name" />
+                        <input name="name" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] my-5' type="text" id="" placeholder="Your Name" />
 
-                    <input name="email" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] mb-5' type="email" id="" placeholder="Email address" />
+                        <input name="email" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] mb-5' type="email" id="" placeholder="Email address" />
 
-                    <input name="phone" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] mb-5' type="text" id="" placeholder="Enter Your Phone" />
+                        <input name="phone" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] mb-5' type="text" id="" placeholder="Enter Your Phone" />
 
-                    <input disabled={pending ? true : false} className=' block h-10 px-7 bg-[#015abd] text-white cursor-pointer uppercase my-4' type="submit" value="Apply for Join" />
-                </form>
+                        <input disabled={pending ? true : false} className=' block h-10 px-7 bg-[#015abd] text-white cursor-pointer uppercase my-4' type="submit" value="Apply for Join" />
+                    </form>
+                </div>
             </div>
-        </div>
         </div >
     );
 };
