@@ -8,7 +8,7 @@ const AboutInfo = () => {
                     <h2 className="text-3xl font-bold">Why Us?</h2>
                     <div className="grid md:grid-cols-2 grid-cols-1 my-14 md:mx-4 sm:mx-4 gap-y-14 ">
 
-                        <div className="flex  items-center justify-around sm:flex-col md:flex-row gap-4 lg:gap-0">
+                        <div className="flex  items-center justify-around flex-col md:flex-row gap-4 lg:gap-0">
                             <div className="md:w-40 lg:w-48 w-3/4 lg:h-40 md:h-40 h-72 lg:flex-shrink-0 md:flex-shrink-0   bg-transparent cursor-pointer group perspective">
                                 <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000 object-contain">
                                     <div className="absolute backface-hidden   w-full h-full">
@@ -38,7 +38,7 @@ const AboutInfo = () => {
                             </div>
                         </div>
 
-                        <div className="flex  items-center justify-around sm:flex-col md:flex-row gap-4 lg:gap-0">
+                        <div className="flex  items-center justify-around flex-col md:flex-row gap-4 lg:gap-0">
                             <div className="md:w-40 lg:w-48 w-3/4 lg:h-40 md:h-40 h-72 lg:flex-shrink-0 md:flex-shrink-0   bg-transparent cursor-pointer group perspective">
                                 <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000 object-contain">
                                     <div className="absolute backface-hidden   w-full h-full">
@@ -72,7 +72,7 @@ const AboutInfo = () => {
 
                     <h2 className="text-3xl font-bold">How it works?</h2>
                     <div className="grid md:grid-cols-2 grid-cols-1 my-14 md:mx-4 sm:mx-4 gap-y-14 ">
-                        <div className="flex  items-center justify-around sm:flex-col md:flex-row gap-4 lg:gap-0">
+                        <div className="flex  items-center justify-around flex-col md:flex-row gap-4 lg:gap-0">
                             <div className="md:w-40 lg:w-48 w-3/4 lg:h-40 md:h-40 h-72 lg:flex-shrink-0 md:flex-shrink-0   bg-transparent cursor-pointer group perspective">
                                 <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000 object-contain">
                                     <div className="absolute backface-hidden   w-full h-full">
@@ -104,7 +104,7 @@ const AboutInfo = () => {
                         </div>
 
 
-                        <div className="flex  items-center justify-around sm:flex-col md:flex-row gap-4 lg:gap-0">
+                        <div className="flex  items-center justify-around flex-col md:flex-row gap-4 lg:gap-0">
                             <div className="md:w-40 lg:w-48 w-3/4 lg:h-40 md:h-40 h-72 lg:flex-shrink-0 md:flex-shrink-0   bg-transparent cursor-pointer group perspective">
                                 <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000 object-contain">
                                     <div className="absolute backface-hidden   w-full h-full">

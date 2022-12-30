@@ -5,15 +5,14 @@ import 'react-animated-slider/build/horizontal.css';
 
 const Banner = () => {
     return (
-        <div className=''>
-            <div className="z-0">
+        <div className='h-full w-none max-w-7xl'>
+            <div className="z-0 w-full">
                 <Slider className=" h-[65vh] md:h-[85vh] w-full overflow-hidden" autoplay='true' duration="5000" previousButton="" nextButton="">
                     {
                         SliderData.map((data, idx) => {
                             return (
                                 <div key={idx} className={` w-full h-[65vh] md:h-[85vh]`}>
-                                    <img src={data?.img} alt="" className=" h-[65vh] md:h-[85vh] w-full relative object-cover" />
-
+                                    <img src={data?.img} alt="" className=" h-[65vh] md:h-[85vh] w-full " />
                                 </div>
                             )
                         })

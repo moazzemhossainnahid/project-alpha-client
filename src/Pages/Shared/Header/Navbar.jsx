@@ -40,14 +40,14 @@ const Navbar = () => {
                                 Navigation?.map((item) => {
 
                                     return (
-                                        <li key={item?.name} className={`${bg && 'text-white'} text-white text-xl mx-2 font-semibold cursor-pointer`}>
+                                        <li key={item?.name} className={`${bg && 'text-neutral'} text-neutral text-xl mx-2 font-semibold cursor-pointer`}>
 
                                             <NavLink
                                                 to={item.href}
                                                 smooth={true}
                                                 duration={500}
                                                 offset={-70}
-                                                className="flex rounded px-4 items-center py-2 text-sm text-white hover:bg-gray-100 hover:text-neutral focus:bg-gray-700 focus:text-white focus:outline-none transition duration-150 ease-in-out"
+                                                className="flex rounded px-4 items-center py-2 text-sm text-gray-900 hover:bg-gray-100 hover:text-neutral focus:bg-gray-700 focus:text-white focus:outline-none transition duration-150 ease-in-out"
                                             > {item.name} </NavLink>
                                         </li>
 
@@ -55,8 +55,8 @@ const Navbar = () => {
                                 })
                             }
 
-                            <li className=' text-white text-xl mx-2 font-semibold cursor-pointer'>{user ? <button className="flex rounded px-4 items-center py-2 text-sm text-white hover:bg-gray-100 hover:text-neutral focus:bg-gray-700 focus:text-white focus:outline-none transition duration-150 ease-in-out" onClick={signout}>Sign Out</button> :
-                                <NavLink className="flex rounded px-4 items-center py-2 text-sm text-white hover:bg-gray-100 hover:text-neutral focus:bg-gray-700 focus:text-white focus:outline-none transition duration-150 ease-in-out" to='/signin'>Sign In</NavLink>}</li>
+                            <li className=' text-gray-900 text-xl mx-2 font-semibold cursor-pointer'>{user ? <button className="flex rounded px-4 items-center py-2 text-sm text-gray-900 hover:bg-gray-100 hover:text-neutral focus:bg-gray-700 focus:text-white focus:outline-none transition duration-150 ease-in-out" onClick={signout}>Sign Out</button> :
+                                <NavLink className="flex rounded px-4 items-center py-2 text-sm text-gray-900 hover:bg-gray-100 hover:text-neutral focus:bg-gray-700 focus:text-white focus:outline-none transition duration-150 ease-in-out" to='/signin'>Sign In</NavLink>}</li>
                         </ul>
                     </div>
                     <div className="navbar-end">

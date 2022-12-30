@@ -5,12 +5,14 @@ import Newsletter from '../Components/Newsletter';
 import Review from '../Components/Review';
 import Team from '../Components/Team';
 import WelcomeNote from '../Components/WelcomeNote';
+import HomeServices from './HomeServices';
 
 const Home = () => {
     return (
-        <div className='w-full h-full items-center justify-center'>
+        <div className='w-full h-full items-center justify-center overflow-hidden'>
             <Banner></Banner>
             <WelcomeNote></WelcomeNote>
+            <HomeServices/>
             <Newsletter></Newsletter>
             <Team></Team>
             <div className="divider"></div>

@@ -10,9 +10,9 @@ const Team = () => {
 
                 </div>
             </div>
-            <div class="carousel w-full mb-20 mt-10">
+            <div class="carousel w-full grid grid-cols-1 lg:grid-cols-3 gap-3 mb-20 mt-10">
                 <div data-aos="fade-up" class="card w-96 m-auto">
-                    <figure><img src="https://i.ibb.co/82T1n2Q/totonji.jpg" alt="Shoes" /></figure>
+                    <figure><img className='object-cover' src="https://i.ibb.co/82T1n2Q/totonji.jpg" alt="Shoes" /></figure>
                     <div class="card-body flex items-center">
                         <h2 class="font-bold text-2xl text-center"> Ahmad Totonji</h2>
                         <h3 className='text-center'>totonjin@gmail.com</h3>

@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutMission = () => {
   return (
-    <div className="  pt-14">
+    <div className="  pt-14 p-5">
       <div className=" lg:container my-20 md:my-20 mx-auto  ">
         <div className="grid grid-cols-1 md:grid-cols-12 grid-flow-row md:gap-5 ">
           <div className="col-span-7  flex  md:flex-row flex-col ">
