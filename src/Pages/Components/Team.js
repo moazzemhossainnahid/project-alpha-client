@@ -1,5 +1,5 @@
 import React from 'react';
-import { TeamData } from '../../Data/TeamData';
+// import { TeamData } from '../../Data/TeamData';
 
 const Team = () => {
     return (
