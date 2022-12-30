@@ -8,23 +8,24 @@ const Success = () => {
     const { id } = useParams();
     const [item, setItem] = useState([]);
     useEffect(() => {
-        axios.get(`https://hospisearch-server-production.up.railway.app/orders/${id}`)
-            .then(res => setItem(res.data))
+        axios.get(`http://localhost:5000/orders/${id}`)
+            .then(res => setItem(res.data));
     }, [id])
     const validatePayment = () => {
         const data = {
             tran_id: id,
             val_id: item?.val_id
         }
-        axios.post(`https://hospisearch-server-production.up.railway.app/validate`, data)
+        axios.post(`http://localhost:5000/validate`, data)
             .then(res => {
                 if (res.data) {
-                    alert("Order placed successfully")
-                    navigate('/')
+                    alert("Order placed successfully");
+                    navigate('/');
                 }
             })
     }
 
+    console.log(item);
     return (
         <main className='overflow-hidden bg-white w-full h-full'>
             <div className="py-10 h-full w-full flex flex-col justify-center items-center gap-2">
@@ -36,12 +37,12 @@ const Success = () => {
                         <p>Enjoy your order</p>
                         <h1 className='text-xl font-bold' style={{ color: '#ff4d30' }}>{item?.product_name}</h1>
                         <p className="text-info">{item?.product_profile}</p>
-                        <p className='text-secondary'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci perferendis fuga officia dicta, voluptatem provident!</p>
-                        <button className="btn btn-lg text-white btn-warning" onClick={validatePayment}>Confirm</button>
+                        <p className='text-secondary pb-3'>Please Confirm Your Payment for Success to Book Your Services!</p>
+                        <button className="btn btn-outline btn-info text-white px-7" onClick={validatePayment}>Click to Confirm</button>
 
                     </div>
                     <div className="flex justify-center w-full h-fit md:w-2/5 p-5 mx-auto">
-                        <img src={item?.product_image} alt="" className="img-fluid w-[80%] object-cover h-full" />
+                        <img src={item?.product_image} alt="" className="img-fluid rounded-xl shadow-xl hover:shadow-inner w-[80%] object-cover h-full" />
                     </div>
                 </div>
             </div>

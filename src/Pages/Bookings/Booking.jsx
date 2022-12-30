@@ -41,8 +41,9 @@ const Booking = () => {
         event.preventDefault();
 
         const info = {
-            item_name: singleData?.name,
-            item_image: singleData?.img,
+            service_name: singleData?.name,
+            service_img: singleData?.img,
+            service_desc: singleData?.desc,
             total_amount: (totalPrice ? singleData?.price * totalPrice : singleData?.price).toFixed(2),
             cus_name: user?.displayName,
             cus_email: user?.email
@@ -51,8 +52,9 @@ const Booking = () => {
 
         console.log(info);
 
-        axios.post(`https://hospisearch-server-production.up.railway.app/init`, info)
+    axios.post(`http://localhost:5000/init`, info)
             .then(res => {
+                console.log(res);
                 if (res?.data) {
                     window.location = res?.data
                 }
