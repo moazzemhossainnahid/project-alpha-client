@@ -1,9 +1,14 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ServicesData } from '../../Data/ServicesData';
+// import { ServicesData } from '../../Data/ServicesData';
+import useServices from '../../Hooks/useServices';
 
 const ServicesCard = () => {
     const navigate = useNavigate();
+    const {data} = useServices();
+
+    const Services = data && data?.data;
+
     return (
         <div className="w-full h-auto my-16">
             <div className="max-w-[1240px] m-auto">
@@ -14,7 +19,7 @@ const ServicesCard = () => {
                     </h2>
                     <div className="grid md:grid-cols-2 lg:grid-cols-3 grid-cols-1 my-14 md:mx-4 sm:mx-4 gap-y-14 ">
                         {
-                            ServicesData?.map(service => (
+                            Services?.map(service => (
                                 <div key={service?.id} className="flex  items-center justify-around sm:flex-col md:flex-row gap-4 lg:gap-0">
                                     <div className="md:w-40 lg:w-60 w-3/4 lg:h-60 md:h-40 h-72 lg:flex-shrink-0 md:flex-shrink-0   bg-transparent cursor-pointer group perspective">
                                         <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000 object-contain">

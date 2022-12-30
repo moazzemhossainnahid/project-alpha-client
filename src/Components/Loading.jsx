@@ -4,7 +4,7 @@ import { RingLoader } from "react-spinners";
 const Loading = () => {
   return (
     <div className="flex justify-center items-center w-full h-screen py-20">
-      <RingLoader color="#f5c332" size={80} cssOverride />
+      <RingLoader color="#047857" size={80} cssOverride />
     </div>
   );   
 };
