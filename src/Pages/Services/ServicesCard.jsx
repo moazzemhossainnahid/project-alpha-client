@@ -2,7 +2,6 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 // import { ServicesData } from '../../Data/ServicesData';
 import useServices from '../../Hooks/useServices';
-import { motion } from "framer-motion";
 
 const ServicesCard = () => {
     const navigate = useNavigate();
