@@ -5,7 +5,7 @@ const Footer = () => {
     const today = new Date();
     const year = today.getFullYear();
     return (
-        <div className="mx-auto container bg-gray-100 xl:px-20 lg:px-12 sm:px-6 px-4 py-12">
+        <div className="mx-auto  bg-gray-100 xl:px-20 lg:px-12 sm:px-6 px-4 py-12">
             <div className="flex flex-col items-center justify-center">
                 <div>
                 <Link to="/" className="normal-case flex justify-center items-center gap-2 text-xl">
@@ -46,17 +46,20 @@ const Footer = () => {
                             />
                         </svg>
                     </div>
-                </div>
-                <div className="flex items-center mt-6">
-                    <p className="text-base leading-4 text-gray-800">
+                </div>          
+            </div>
+             <footer class="footer px-10 py-4 flex justify-center items-center bg-black mt-10">
+                <div class="items-center justify-center grid-flow-col">
+                <p className="text-base leading-4 text-white">
                         {year} <span className="font-semibold">AvailBox</span>
                     </p>
-                    <div className="border-l border-gray-800 pl-2 ml-2">
-                        <p className="text-base leading-4 text-gray-800">Inc. &copy; All rights reserved</p>
+                    <div className="border-l border-white pl-2 ml-2">
+                        <p className="text-base leading-4 text-white">Inc. &copy; All rights reserved</p>
                     </div>
-                </div>
-            </div>
+                    </div>
+            </footer>
         </div>
+        
     );
 };
 

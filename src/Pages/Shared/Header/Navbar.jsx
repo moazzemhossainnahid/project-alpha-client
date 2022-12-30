@@ -24,7 +24,7 @@ const Navbar = () => {
     return (
         <div className={`${bg ? "bg-indigo-500 h-16 m-0 p-0 w-full shadow-sm" : "text-black"
             } flex items-center app__navbar fixed top-0 w-full text-dark z-50 transition-all duration-300`}>
-            <div className="navbar bg-indigo-500 text-white">
+            <div className="navbar bg-slate-300 text-white">
                 <div className="navbar-start">
 
                     <Link to="/" className="normal-case flex justify-center items-center gap-2 text-xl">
