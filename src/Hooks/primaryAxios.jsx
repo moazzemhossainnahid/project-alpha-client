@@ -3,7 +3,7 @@ import { signOut } from "firebase/auth";
 import auth from "../Firebase/firebase.init";
 
 const primaryAxios = axios.create({
-  baseURL: "http://localhost:5000/",
+  baseURL: "https://availbox-server.vercel.app/",
   // baseURL: "https://aspen-essentials-server.up.railway.app/api/v1/",
 });
   

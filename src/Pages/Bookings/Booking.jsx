@@ -52,7 +52,7 @@ const Booking = () => {
 
         console.log(info);
 
-    axios.post(`http://localhost:5000/init`, info)
+    axios.post(`https://availbox-server.vercel.app/init`, info)
             .then(res => {
                 console.log(res);
                 if (res?.data) {
