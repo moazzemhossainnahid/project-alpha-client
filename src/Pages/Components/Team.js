@@ -23,7 +23,7 @@ const Team = () => {
 
                 </div>
                 <div data-aos="fade-up" class="card w-96 m-auto">
-                    <figure><img src="https://i.ibb.co/WvJb8rX/Whats-App-Image-2022-12-29-at-8-22-47-PM-1.jpg" alt="Shoes" /></figure>
+                    <figure><img src="https://i.ibb.co/rk2H0X1/Whats-App-Image-2022-12-29-at-8-22-47-PM.jpg" alt="Shoes" /></figure>
                     <div class="card-body flex items-center">
                         <h2 class="font-bold text-2xl text-center">Piyush Kanti Sutradhar</h2>
                         <h3 className='text-center'>piyush.pinak007@gmail.com</h3>
@@ -33,7 +33,7 @@ const Team = () => {
                     </div>
                 </div>
                 <div data-aos="fade-up" class="card w-96 m-auto">
-                    <figure><img src="https://i.ibb.co/rk2H0X1/Whats-App-Image-2022-12-29-at-8-22-47-PM.jpg" alt="Shoes" /></figure>
+                    <figure><img src="https://i.ibb.co/WvJb8rX/Whats-App-Image-2022-12-29-at-8-22-47-PM-1.jpg" alt="Shoes" /></figure>
                     <div class="card-body flex items-center">
                         <h2 class="font-bold text-2xl text-center">Md. Shamim Hossen</h2>
                         <h3 className='text-center'>shamim.cse99@gmail.com</h3>
