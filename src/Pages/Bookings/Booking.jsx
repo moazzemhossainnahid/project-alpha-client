@@ -92,7 +92,7 @@ const Booking = () => {
                                 </h2>
                                 <form onSubmit={confirmToPay}>
                                     <div className=" grid md:grid-cols-2 grid-cols-1 justify-items-stretch  gap-5  ">
-                                        <div>
+                                        <div className='mt-3'>
                                             <label className="relative cursor-pointer">
                                                 <input
                                                     type="text"
@@ -101,12 +101,12 @@ const Booking = () => {
                                                     className="h-[50px] bg-[#f3f3f3] rounded w-full px-6 text-md border outline-none focus:border-gray-700 focus:border-opacity-60 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
                                                     name="username"
                                                 />
-                                                <span className=" text-sm bg-transparent te text-opacity-80 absolute left-2 px-2 top-[-27px] transition duration-200 input-text">
+                                                <span className=" text-sm bg-transparent te text-opacity-80 absolute left-0 px-2 top-[-37px] transition duration-200 input-text">
                                                     User Name
                                                 </span>
                                             </label>
                                         </div>
-                                        <div>
+                                        <div className='mt-3'>
                                             <label className="relative cursor-pointer">
                                                 <input
                                                     type="email"
@@ -115,12 +115,12 @@ const Booking = () => {
                                                     className="h-[50px]  bg-[#f3f3f3] w-full px-6 text-md border rounded outline-none focus:border-gray-700 focus:border-opacity-60 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
                                                     name="email"
                                                 />
-                                                <span className=" text-sm bg-transparent te text-opacity-80 absolute left-2 px-2 top-[-27px] transition duration-200 input-text">
+                                                <span className=" text-sm bg-transparent te text-opacity-80 absolute left-0 px-2 top-[-37px] transition duration-200 input-text">
                                                     Email
                                                 </span>
                                             </label>
                                         </div>
-                                        <div>
+                                        <div className='mt-3'>
                                             <label className="relative cursor-pointer">
                                                 <input
                                                     type="text"
@@ -129,12 +129,12 @@ const Booking = () => {
                                                     className="h-[50px]  bg-[#f3f3f3] w-full px-6 text-md border rounded outline-none focus:border-gray-700 focus:border-opacity-60 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
                                                     name="name"
                                                 />
-                                                <span className=" text-sm bg-transparent te text-opacity-80 absolute left-2 px-2 top-[-27px] transition duration-200 input-text">
+                                                <span className=" text-sm bg-transparent te text-opacity-80 absolute left-0 px-2 top-[-37px] transition duration-200 input-text">
                                                     Service Name
                                                 </span>
                                             </label>
                                         </div>
-                                        <div>
+                                        <div className='mt-3'>
                                             <label className="relative cursor-pointer">
                                                 <input
                                                     type="text"
@@ -143,7 +143,7 @@ const Booking = () => {
                                                     className="h-[50px]  bg-[#f3f3f3] w-full px-6 text-md border rounded outline-none focus:border-gray-700 focus:border-opacity-60 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
                                                     name="price"
                                                 />
-                                                <span className=" text-sm bg-transparent te text-opacity-80 absolute left-2 px-2 top-[-27px] transition duration-200 input-text">
+                                                <span className=" text-sm bg-transparent te text-opacity-80 absolute left-0 px-2 top-[-37px] transition duration-200 input-text">
                                                     Service Price
                                                 </span>
                                             </label>
