@@ -5,7 +5,7 @@ import Count from "./Count";
 const Review = () => {
   return (
     <section className="statistics" data-aos="fade-right">
-      <h2 className="text-center">Hospital Information in Numbers</h2>
+      <h2 className="text-center">Services Information in Numbers</h2>
       <p className="text-center">Some Statistics</p>
       <ul className="statistics-list">
         <li className="statistics-item">
@@ -20,7 +20,7 @@ const Review = () => {
           <h4>
             <Count end="3500"></Count>
           </h4>
-          <p>Patients a year</p>
+          <p>Customers in a year</p>
         </li>
         <li className="statistics-item">
           <i class="fas fa-user-friends"></i>
@@ -41,7 +41,7 @@ const Review = () => {
           <h4>
             <Count end="15000"></Count>
           </h4>
-          <p>Happy Patient</p>
+          <p>Happy Customers</p>
         </li>
       </ul>
     </section>

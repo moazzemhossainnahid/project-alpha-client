@@ -1,27 +1,21 @@
 export const TeamData = [
     {
         id: 1,
-        name: "Paul Trueman",
-        img: "https://elanta.app/nazar/starbelly-demo/img/team/1.png",
-        title: "Chef"
+        name: "Ahmad Totonji",
+        img: "https://i.ibb.co/82T1n2Q/totonji.jpg",
+        title: "Computer Science and Engineering Daffodil International University"
     },
     {
         id: 2,
-        name: "Emma Newman",
-        img: "https://elanta.app/nazar/starbelly-demo/img/team/2.png",
-        title: "Assistant chef"
+        name: "Piyush Kanti Sutradhar",
+        img: "https://i.ibb.co/WvJb8rX/Whats-App-Image-2022-12-29-at-8-22-47-PM-1.jpg",
+        title: "Computer Science and Engineering Daffodil International University"
     },
     {
         id: 3,
-        name: "Oscar Oldman",
-        img: "https://elanta.app/nazar/starbelly-demo/img/team/3.png",
-        title: "Chef"
-    },
-    {
-        id: 4,
-        name: "Ed Freeman",
-        img: "https://elanta.app/nazar/starbelly-demo/img/team/4.png",
-        title: "Assistant chef"
-    },
+        name: "Md. Shamim Hossen",
+        img: "https://i.ibb.co/rk2H0X1/Whats-App-Image-2022-12-29-at-8-22-47-PM.jpg",
+        title: "Computer Science and Engineering Daffodil International University"
+    }
 
 ]

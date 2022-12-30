@@ -1,90 +1,61 @@
 import React from 'react';
 import Slider from "react-slick";
-import SliderWrapper from "../Components/_SlickSlider";
+
 
 const CustomerReview = () => {
-    const settings = {
-        dots: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        initialSlide: 0,
-        speed: 500,
-        arrows: false,
-        adaptiveHeight: true,
-        appendDots: (dots) => <ul>{dots}</ul>,
-        customPaging: (i) => (
-          <div className="ft-slick__dots--custom">
-            <div className="loading" />
+  return (
+    <div className="hero" style={{ backgroundImage: "url(https://img.freepik.com/free-photo/abstract-luxury-plain-blur-grey-black-gradient-used-as-background-studio-wall-display-your-p_1258-103995.jpg)", height: '420px', width: '100%', backgroundSize: 'cover', backgroundRepeat: 'no-repeat' }}>
+      <div class="carousel w-full">
+        <div id="item1" class="carousel-item w-full flex flex-col justify-center ">
+          <div className="p-10 rounden dark:text-slate-200 text-black">
+            <div className='h-40 w-40 m-auto'>
+              <img src="https://esmarts.qodeinteractive.com/wp-content/uploads/2017/10/h1-t6.png?" />
+            </div>
+            <div>
+              <h1 className="text-center text-xl font-bold">Anniy Page </h1>
+              <h2 className='text-center'>Student</h2>
+              <p className="text-sm  my-4 text-center">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore edolore magna aliquyam erat, sed diam voluptua.
+              </p>
+            </div>
           </div>
-        ),
-      };
-    return (
-        <div>
-      <div
-        style={{
-          backgroundImage:
-            "url(https://esmarts.qodeinteractive.com/wp-content/uploads/2017/09/testimonials-background-1.jpg)",
-          height: "380px",
-          width: "100%",
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <SliderWrapper>
-          <Slider {...settings}>
-            <div class=" w-full flex flex-col justify-center  mt-14 ">
-              <div className=" dark:text-slate-200 text-white">
-                <div className="h-44 w-40 m-auto pb-5 ">
-                  <img
-                    src="https://themes-themegoods.b-cdn.net/coursector/wp-content/uploads/2019/04/creative-team-meet-at-a-table-in-an-office-one-PWP9HT6.jpg"
-                    alt="t"
-                    className="rounded-full h-full w-full  "
-                  />
-                </div>
-
-                <div className="mb-10">
-                  <h1 className="text-center text-xl font-bold">
-                    Jessica Smith -Graphic design
-                  </h1>
-                  <p className="text-sm  my-4 text-center">
-                    People who build their own home tend to be very courageous.
-                    These people are curious about life. They're thinking about
-                    what it means to live in a house, rather than just buying a
-                    commodity.
-                  </p>
-                </div>
-              </div>
+        </div>
+        <div id="item2" class="carousel-item w-full flex flex-col justify-center ">
+          <div className="p-10 rounden dark:text-slate-200 text-black">
+            <div className='h-40 w-40 m-auto'>
+              <img src="https://esmarts.qodeinteractive.com/wp-content/uploads/2017/10/h1-t5-150x150.png?" />
             </div>
-            <div class=" w-full flex flex-col justify-center mt-14  ">
-              <div className=" dark:text-slate-200 text-white">
-                <div className="h-44 w-40 m-auto pb-5  ">
-                  <img
-                    src="https://themes-themegoods.b-cdn.net/coursector/wp-content/uploads/2019/04/exercising-outdoors-7VSUZMN.jpg"
-                    alt="t"
-                    className="rounded-full h-full w-full "
-                  />
-                </div>
-
-                <div className="mb-10">
-                  <h1 className="text-center text-xl font-bold">
-                    Brie Larsson - Software Engineer
-                  </h1>
-                  <p className="text-sm  my-4 text-center">
-                    Statement buttons cover-up tweaks patch pockets perennial
-                    lapel collar flap chest pockets topline stitching cropped
-                    jacket. Effortless comfortable full leather lining.
-                  </p>
-                </div>
-              </div>
+            <div>
+              <h1 className="text-center text-xl font-bold">John Evan</h1>
+              <h2 className='text-center'>Student</h2>
+              <p className="text-sm  my-4 text-center">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore edolore magna aliquyam erat, sed diam voluptua.
+              </p>
             </div>
-          </Slider>
-        </SliderWrapper>
+          </div>
+        </div>
+        <div id="item3" class="carousel-item w-full flex flex-col justify-center ">
+          <div className="p-10 rounden dark:text-slate-200 text-black">
+            <div className='h-40 w-40 m-auto'>
+              <img src="https://esmarts.qodeinteractive.com/wp-content/uploads/2017/10/h1-t4-150x150.png?" />
+            </div>
+            <div>
+              <h1 className="text-center text-xl font-bold">Barbara Mori</h1>
+              <h2 className='text-center'>Student</h2>
+              <p className="text-sm  my-4 text-center">
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore edolore magna aliquyam erat, sed diam voluptua.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center w-full py-2 gap-2 mt-96">
+        <a href="#item1" class="btn btn-circle bg-white h-[50]"></a>
+        <a href="#item2" class="btn btn-circle bg-white"></a>
+        <a href="#item3" class="btn btn-circle bg-white"></a>
       </div>
     </div>
-    );
+  );
 };
 
 export default CustomerReview;
