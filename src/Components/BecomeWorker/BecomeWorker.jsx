@@ -21,9 +21,13 @@ const BecomeWorker = () => {
             message: e.target.phone.value,
             expert: e.target.expert.value,
             place: e.target.place.value,
+            dob: e.target.dob.value,
+            nid: e.target.nid.value,
+            edu: e.target.edu.value,
+            address: e.target.address.value,
         }
 
-        console.log(info);
+        // console.log(info);
 
         swal({
             title: "Are you sure?",
@@ -107,6 +111,10 @@ const BecomeWorker = () => {
                         <input name="email" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] mb-5' type="email" id="" placeholder="Email address" />
 
                         <input name="phone" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] mb-5' type="text" id="" placeholder="Enter Your Phone" />
+                        <input name="dob" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] mb-5' type="date" id="" placeholder="Enter Your Date of Birth" />
+                        <input name="nid" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] mb-5' type="text" id="" placeholder="Enter Your NID No." />
+                        <input name="edu" className=' block w-full h-10 pl-2 border-2 border-[#d8dada] mb-5' type="text" id="" placeholder="Enter Your Last Edu. Qualification" />
+                        <textarea name="address" className=' block w-full h-20 pl-2 border-2 border-[#d8dada] mb-5' type="text" id="" placeholder="Enter Your Address" />
 
                         <input disabled={pending ? true : false} className=' block h-10 px-7 bg-[#015abd] text-white cursor-pointer uppercase my-4' type="submit" value="Apply for Join" />
                     </form>
