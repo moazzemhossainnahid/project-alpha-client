@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import BecomeWorker from './Components/BecomeWorker/BecomeWorker';
 import RequireAuth from './Components/RequireAuth';
 import About from './Pages/About/About';
 import SignIn from './Pages/Authentication/SignIn/SignIn';
@@ -21,6 +22,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/services' element={<Services />} />
+        <Route path='/joinus' element={<RequireAuth><BecomeWorker /></RequireAuth>} />
         <Route path='/booking/:id' element={<RequireAuth><Booking /></RequireAuth>} />
         <Route path='/ssl-payment-success/:id' element={<RequireAuth><Success /></RequireAuth>} />
         <Route path='/contact' element={<Contact />} />

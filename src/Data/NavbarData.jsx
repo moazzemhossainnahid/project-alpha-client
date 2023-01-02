@@ -8,6 +8,10 @@ export const Navigation = [
         href: "/services"
     },
     {
+        name: "Join US",
+        href: "/joinus"
+    },
+    {
         name: "About US",
         href: "/about"
     },
