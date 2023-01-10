@@ -23,9 +23,9 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/services' element={<Services />} />
-        <Route path='/service/provider/:id' element={<Service />} />
+        <Route path='/service/:id' element={<Service />} />
         <Route path='/joinus' element={<RequireAuth><BecomeWorker /></RequireAuth>} />
-        <Route path='/booking/:id' element={<RequireAuth><Booking /></RequireAuth>} />
+        <Route path='/hire/provider/:id' element={<RequireAuth><Booking /></RequireAuth>} />
         <Route path='/ssl-payment-success/:id' element={<RequireAuth><Success /></RequireAuth>} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/signin' element={<SignIn />} />
