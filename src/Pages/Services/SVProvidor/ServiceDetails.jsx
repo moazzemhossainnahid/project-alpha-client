@@ -1,11 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const ServiceDetails = (data) => {
+const ServiceDetails = ({data, id}) => {
     const navigate = useNavigate();
 
     console.log(data?.data);
-    const providor = data?.data;
+    console.log(`ID is ${id}`);
+    const providor = data;
     const ratings = providor?.rating;
 
     return (
@@ -91,7 +92,7 @@ const ServiceDetails = (data) => {
                 </div>
 
                 <div className="mt-3">
-                    <button onClick={() => navigate(`/hire/provider/${providor?.id}`)} className="btn btn-outline btn-neutral px-7 ">Click to Hire</button>
+                    <button onClick={() => navigate(`/hire/${id}/${providor?.id}`)} className="btn btn-outline btn-neutral px-7 ">Click to Hire</button>
                 </div>
 
             </div>

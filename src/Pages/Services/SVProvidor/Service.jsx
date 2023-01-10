@@ -13,7 +13,7 @@ const Service = () => {
     return (
         <div className="container grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 mx-auto py-20 px-3 md:px-5">
             {
-                singleData?.provider?.map((data) => <ServiceDetails key={data?.name} data={data} />)
+                singleData?.provider?.map((data) => <ServiceDetails key={data?.name} data={data} id={id} />)
             }
         </div>
     );

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { ServicesData } from '../../Data/ServicesData';
@@ -6,11 +6,13 @@ import auth from '../../Firebase/firebase.init';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBangladeshiTakaSign } from '@fortawesome/free-solid-svg-icons';
+import { ServicesNewData } from '../../Data/ServicesNewData';
 
 const Booking = () => {
-    const { id } = useParams();
+    const { id, srvid } = useParams();
     const [totalPrice, setTotalPrice] = useState();
     const [isChecked, setIsChecked] = useState(false);
+    // const [srv, setSrv] = useState();
     const [user] = useAuthState(auth);
   
   
@@ -22,7 +24,11 @@ const Booking = () => {
       }
     };
 
-    const singleData = ServicesData?.find(s => s?.id === Number(id));
+    const singleData = ServicesNewData?.find(s => s?.id === Number(srvid));
+    const Provider = singleData?.provider?.find(s => s?.id === Number(id) );
+    console.log(id, srvid);
+    console.log(singleData);
+    console.log(Provider);
 
     const handleInputValue = (e) => {
         let value = parseInt(e.target.value);
