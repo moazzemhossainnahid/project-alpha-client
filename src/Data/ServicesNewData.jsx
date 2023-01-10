@@ -8,40 +8,37 @@ export const ServicesNewData = [
             {
                 id: 1,
                 name: "Munira Aktar",
+                img: "",
                 exp: 2,
                 idNo: "M0001",
                 phone: "+8801774XXXX04",
-                price: {
-                    perHour: 7,
-                    perDay: 55,
-                    perMonth: 1400
-                },
+                perHour: 7,
+                perDay: 55,
+                perMonth: 1400,
                 rating: 4
             },
             {
                 id: 2,
                 name: "Sahazana Katun",
+                img: "",
                 exp: 4,
                 idNo: "M0002",
                 phone: "+8801774XXXX04",
-                price: {
-                    perHour: 6,
-                    perDay: 45,
-                    perMonth: 1300
-                },
+                perHour: 6,
+                perDay: 45,
+                perMonth: 1300,
                 rating: 5
             },
             {
                 id: 3,
                 name: "Nazmun Nahar",
+                img: "",
                 exp: 2,
                 idNo: "M0003",
                 phone: "+8801774XXXX04",
-                price: {
-                    perHour: 5,
-                    perDay: 40,
-                    perMonth: 1000
-                },
+                perHour: 5,
+                perDay: 40,
+                perMonth: 1000,
                 rating: 3
             }
         ]
@@ -55,40 +52,37 @@ export const ServicesNewData = [
             {
                 id: 1,
                 name: "Nishi Dikha",
+                img: "",
                 exp: 3,
                 idNo: "N0001",
                 phone: "+8801774XXXX04",
-                price: {
-                    perHour: 5,
-                    perDay: 42,
-                    perMonth: 1100
-                },
+                perHour: 5,
+                perDay: 42,
+                perMonth: 1100,
                 rating: 4
             },
             {
                 id: 2,
                 name: "Rifat Mishu",
+                img: "",
                 exp: 5,
                 idNo: "N0002",
                 phone: "+8801774XXXX04",
-                price: {
-                    perHour: 7,
-                    perDay: 55,
-                    perMonth: 1450
-                },
+                perHour: 7,
+                perDay: 55,
+                perMonth: 1450,
                 rating: 5
             },
             {
                 id: 3,
                 name: "Jui Tasnim",
+                img: "",
                 exp: 2,
                 idNo: "N0003",
                 phone: "+8801774XXXX04",
-                price: {
-                    perHour: 4,
-                    perDay: 30,
-                    perMonth: 800
-                },
+                perHour: 4,
+                perDay: 30,
+                perMonth: 800,
                 rating: 2
             }
         ]
@@ -102,40 +96,37 @@ export const ServicesNewData = [
             {
                 id: 1,
                 name: "Sharjina Asha",
+                img: "",
                 exp: 3,
                 idNo: "G0001",
                 phone: "+8801774XXXX04",
-                price: {
-                    perHour: 7,
-                    perDay: 55,
-                    perMonth: 1400
-                },
+                perHour: 7,
+                perDay: 55,
+                perMonth: 1400,
                 rating: 5
             },
             {
                 id: 2,
                 name: "Nasiba Khan",
+                img: "",
                 exp: 5,
                 idNo: "G0002",
                 phone: "+8801774XXXX04",
-                price: {
-                    perHour: 10,
-                    perDay: 70,
-                    perMonth: 1700
-                },
+                perHour: 10,
+                perDay: 70,
+                perMonth: 1700,
                 rating: 3
             },
             {
                 id: 3,
                 name: "Tuba Fardin",
+                img: "",
                 exp: 2,
                 idNo: "G0003",
                 phone: "+8801774XXXX04",
-                price: {
-                    perHour: 6,
-                    perDay: 45,
-                    perMonth: 1320
-                },
+                perHour: 6,
+                perDay: 45,
+                perMonth: 1320,
                 rating: 1
             }
         ]
@@ -149,40 +140,37 @@ export const ServicesNewData = [
             {
                 id: 1,
                 name: "Mithun Hasan",
+                img: "",
                 exp: 3,
                 idNo: "C0001",
                 phone: "+8801774XXXX04",
-                price: {
-                    perHour: 7,
-                    perDay: 55,
-                    perMonth: 1400
-                },
+                perHour: 7,
+                perDay: 55,
+                perMonth: 1400,
                 rating: 4
             },
             {
                 id: 2,
                 name: "Morium Begum",
+                img: "",
                 exp: 5,
                 idNo: "C0002",
                 phone: "+8801774XXXX04",
-                price: {
-                    perHour: 12,
-                    perDay: 80,
-                    perMonth: 1850
-                },
+                perHour: 12,
+                perDay: 80,
+                perMonth: 1850,
                 rating: 5
             },
             {
                 id: 3,
                 name: "Ferdus Ara",
+                img: "",
                 exp: 1,
                 idNo: "C0003",
                 phone: "+8801774XXXX04",
-                price: {
-                    perHour: 5,
-                    perDay: 37,
-                    perMonth: 1220
-                },
+                perHour: 5,
+                perDay: 37,
+                perMonth: 1220,
                 rating: 1
             }
         ]
@@ -196,40 +184,37 @@ export const ServicesNewData = [
             {
                 id: 1,
                 name: "Nabila Zannat",
+                img: "",
                 exp: 3,
                 idNo: "B0001",
                 phone: "+8801774XXXX04",
-                price: {
-                    perHour: 7,
-                    perDay: 55,
-                    perMonth: 1400
-                },
+                perHour: 7,
+                perDay: 55,
+                perMonth: 1400,
                 rating: 4
             },
             {
                 id: 2,
                 name: "Piyushi Thakur",
+                img: "",
                 exp: 5,
                 idNo: "B0002",
                 phone: "+8801774XXXX04",
-                price: {
-                    perHour: 8,
-                    perDay: 60,
-                    perMonth: 1500
-                },
+                perHour: 8,
+                perDay: 60,
+                perMonth: 1500,
                 rating: 5
             },
             {
                 id: 3,
                 name: "Shamima Kobir",
+                img: "",
                 exp: 4,
                 idNo: "B0003",
                 phone: "+8801774XXXX04",
-                price: {
-                    perHour: 6,
-                    perDay: 50,
-                    perMonth: 1470
-                },
+                perHour: 6,
+                perDay: 50,
+                perMonth: 1470,
                 rating: 2
             }
         ]
@@ -243,40 +228,37 @@ export const ServicesNewData = [
             {
                 id: 1,
                 name: "Zikrul Apon",
+                img: "",
                 exp: 3,
                 idNo: "D0001",
                 phone: "+8801774XXXX04",
-                price: {
-                    perHour: 7,
-                    perDay: 55,
-                    perMonth: 1400
-                },
+                perHour: 7,
+                perDay: 55,
+                perMonth: 1400,
                 rating: 4
             },
             {
                 id: 2,
                 name: "Umme Kulsum",
+                img: "",
                 exp: 5,
                 idNo: "D0002",
                 phone: "+8801774XXXX04",
-                price: {
-                    perHour: 13,
-                    perDay: 90,
-                    perMonth: 1980
-                },
+                perHour: 13,
+                perDay: 90,
+                perMonth: 1980,
                 rating: 5
             },
             {
                 id: 3,
                 name: "Rifat Rosid",
+                img: "",
                 exp: 2,
                 idNo: "D0003",
                 phone: "+8801774XXXX04",
-                price: {
-                    perHour: 7,
-                    perDay: 57,
-                    perMonth: 1630
-                },
+                perHour: 7,
+                perDay: 57,
+                perMonth: 1630,
                 rating: 2
             }
         ]

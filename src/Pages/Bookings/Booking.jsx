@@ -1,21 +1,22 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { ServicesData } from '../../Data/ServicesData';
 import auth from '../../Firebase/firebase.init';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBangladeshiTakaSign } from '@fortawesome/free-solid-svg-icons';
 import { ServicesNewData } from '../../Data/ServicesNewData';
+import useServices from '../../Hooks/useServices';
 
 const Booking = () => {
     const { id, srvid } = useParams();
     const [totalPrice, setTotalPrice] = useState();
     const [isChecked, setIsChecked] = useState(false);
+    const {data} = useServices();
     // const [srv, setSrv] = useState();
     const [user] = useAuthState(auth);
   
-  
+  console.log(data);
     const handleChecked = (event) => {
       if (event.target.checked) {
         setIsChecked(true);
@@ -24,11 +25,11 @@ const Booking = () => {
       }
     };
 
-    const singleData = ServicesNewData?.find(s => s?.id === Number(srvid));
-    const Provider = singleData?.provider?.find(s => s?.id === Number(id) );
-    console.log(id, srvid);
+    const Services = data?.data?.find(s => s?.id === Number(srvid));
+    const singleData = Services?.provider?.find(s => s?.id === Number(id) );
+    // console.log(id, srvid);
+    console.log(Services);
     console.log(singleData);
-    console.log(Provider);
 
     const handleInputValue = (e) => {
         let value = parseInt(e.target.value);
@@ -74,7 +75,7 @@ const Booking = () => {
                 <img className='h-28 rounded' src={singleData?.img} alt=" " />
                 <div style={{ fontFamily: "Rajdhani" }} className='my-auto text-2xl font-bold flex flex-col gap-2'>
                     <h4>{singleData?.name}</h4>
-                    <p><FontAwesomeIcon icon={faBangladeshiTakaSign} /> {singleData?.price}/Month</p>
+                    <p><FontAwesomeIcon icon={faBangladeshiTakaSign} /> {singleData?.price?.perMonth}/Month</p>
                 </div>
                 <div className='my-auto'>
                     <input onChange={handleInputValue}
@@ -144,7 +145,7 @@ const Booking = () => {
                                             <label className="relative cursor-pointer">
                                                 <input
                                                     type="text"
-                                                    value={totalPrice ? singleData?.price * totalPrice : singleData?.price}
+                                                    value={totalPrice ? singleData?.price?.perMonth * totalPrice : singleData?.price?.perMonth}
                                                     placeholder="Input"
                                                     className="h-[50px]  bg-[#f3f3f3] w-full px-6 text-md border rounded outline-none focus:border-gray-700 focus:border-opacity-60 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
                                                     name="price"
