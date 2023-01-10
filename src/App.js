@@ -10,6 +10,7 @@ import Contact from './Pages/Contact/Contact';
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
 import Services from './Pages/Services/Services';
+import Service from './Pages/Services/SVProvidor/Service';
 import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 import Success from './Pages/Succss/Success';
@@ -22,6 +23,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/services' element={<Services />} />
+        <Route path='/service/provider/:id' element={<Service />} />
         <Route path='/joinus' element={<RequireAuth><BecomeWorker /></RequireAuth>} />
         <Route path='/booking/:id' element={<RequireAuth><Booking /></RequireAuth>} />
         <Route path='/ssl-payment-success/:id' element={<RequireAuth><Success /></RequireAuth>} />
