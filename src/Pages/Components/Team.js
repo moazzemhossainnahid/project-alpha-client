@@ -7,7 +7,6 @@ const Team = () => {
             <div className="flex flex-col md:flex-row justify-between items-center gap-3 px-5 mt-10">
                 <div className="">
                     <h1 className="text-3xl md:text-5xl font-bold fw-bold capitalize" style={{ fontFamily: "Rajdhani" }}>They will get<span className="bg-gray-200"> service </span>for you</h1>
-
                 </div>
             </div>
             <div class="carousel w-full grid grid-cols-1 lg:grid-cols-3 gap-3 mb-20 mt-10">
@@ -17,7 +16,7 @@ const Team = () => {
                         <h2 class="font-bold text-2xl text-center"> Ahmad Totonji</h2>
                         <div className="text-start">
                             <h3 className=''>totonjin@gmail.com</h3>
-                            <h3 className=' mb-5'>+8801774005404</h3>
+                            <h3 className='mb-5'>+8801774005404</h3>
                             <p className=''>Student of Computer Science and Engineering Department from Daffodil International University</p>
                         </div>
 
@@ -30,7 +29,7 @@ const Team = () => {
                         <h2 class="font-bold text-2xl text-center">Piyush Kanti Sutradhar</h2>
                         <div className="text-start">
                             <h3 className=''>piyush.pinak007@gmail.com</h3>
-                            <h3 className=' mb-5'>+880163630411</h3>
+                            <h3 className='mb-5'>+880163630411</h3>
                             <p className=''>Student of Computer Science and Engineering Department from Daffodil International University</p>
                         </div>
                     </div>
@@ -41,7 +40,7 @@ const Team = () => {
                         <h2 class="font-bold text-2xl text-center">Md. Shamim Hossen</h2>
                         <div className="text-start">
                             <h3 className=''>shamim.cse99@gmail.com</h3>
-                            <h3 className=' mb-5'>+880163630411</h3>
+                            <h3 className='mb-5'>+880163630411</h3>
                             <p className=''>Student of Computer Science and Engineering Department from Daffodil International University</p>
                         </div>
                     </div>
