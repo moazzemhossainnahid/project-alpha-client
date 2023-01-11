@@ -21,9 +21,9 @@ const ServicesCard = () => {
                         {
                             Services?.map(service => (
                                 <div key={service?.id} className="flex  items-center justify-around sm:flex-col md:flex-row gap-4 lg:gap-0">
-                                        <div className="md:w-40 lg:w-60 w-3/4 lg:h-60 md:h-40 h-72 lg:flex-shrink-0 md:flex-shrink-0   bg-transparent cursor-pointer group perspective">
+                                        <div className="md:w-44 lg:w-72 w-3/4 lg:h-60 md:h-40 h-72 lg:flex-shrink-0 md:flex-shrink-0   bg-transparent cursor-pointer group perspective">
                                             <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000 object-contain">
-                                                <div className="absolute backface-hidden   w-full h-full">
+                                                <div className="absolute backface-hidden w-full h-full">
                                                     <div onClick={() => navigate(`/service/${service?.id}`)} className="h-full w-full relative">
                                                         <img
                                                             src={service?.img}
@@ -51,7 +51,7 @@ const ServicesCard = () => {
                                                                 {service?.name}
                                                             </h1>
                                                             <p className="text-sm text-white">{service?.desc}</p>
-                                                            <button onClick={() => navigate(`/service/${service?.id}`)} className="btn btn-outline btn-info px-7 ">Click to Hire</button>
+                                                            <button onClick={() => navigate(`/service/${service?.id}`)} className="btn btn-outline btn-info px-7 ">View all Provider</button>
                                                         </div>
                                                     </div>
                                                 </div>
