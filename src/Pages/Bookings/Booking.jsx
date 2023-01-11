@@ -11,11 +11,13 @@ const Booking = () => {
     const { id, srvid } = useParams();
     const [totalPrice, setTotalPrice] = useState();
     const [isChecked, setIsChecked] = useState(false);
+    const [slct, setSlct] = useState();
     const { data } = useServices();
     // const [srv, setSrv] = useState();
     const [user] = useAuthState(auth);
 
-    console.log(data);
+    // console.log(data);
+
     const handleChecked = (event) => {
         if (event.target.checked) {
             setIsChecked(true);
@@ -30,17 +32,32 @@ const Booking = () => {
     console.log(Services);
     console.log(singleData);
 
+    const handleSelectScheme = (e) => {
+        const scheme = e.target.value;
+        setSlct(scheme);
+    };
+
+    // console.log(slct);
+
     const handleInputValue = (e) => {
         let value = parseInt(e.target.value);
 
         if (value < 0) {
             alert('value can not be less than 0');
             value = 1;
+        }else if(slct === "Hourly"){
+            setTotalPrice(value * singleData?.perHour)
+        }else if(slct === "Daily"){
+            setTotalPrice(value * singleData?.perDay)
+        }else if(slct === "Monthly"){
+            setTotalPrice(value * singleData?.perMonth)
         }
         else {
-            setTotalPrice(value);
+            alert("Please Select a Scheme First.")
         }
     };
+
+    // console.log(totalPrice);
 
     const confirmToPay = (event) => {
 
@@ -77,22 +94,40 @@ const Booking = () => {
                     </div>
                     <div style={{ fontFamily: "Rajdhani" }} className='my-auto w-full md:w-3/5 text-2xl font-bold flex flex-col gap-2'>
                         <h4 className='text-rose-600 text-2xl md:text-5xl'>{singleData?.name}</h4>
-                        <div className="text-end">
-                        <p><FontAwesomeIcon icon={faDollarSign} /> {singleData?.perHour}/Hour</p>
-                        <p><FontAwesomeIcon icon={faDollarSign} /> {singleData?.perDay}/Day</p>
-                        <p><FontAwesomeIcon icon={faDollarSign} /> {singleData?.perMonth}/Month</p>
+                        <div className="text-start md:text-end py-3">
+                            <p><FontAwesomeIcon icon={faDollarSign} /> {singleData?.perHour}/Hour</p>
+                            <p><FontAwesomeIcon icon={faDollarSign} /> {singleData?.perDay}/Day</p>
+                            <p><FontAwesomeIcon icon={faDollarSign} /> {singleData?.perMonth}/Month</p>
                         </div>
                     </div>
                 </div>
                 <div className="flex flex-col md:flex-row gap-3 w-full md:w-4/5 mx-auto items-center justify-center">
-                    <div className='w-full md:w-3/5 mx-auto'>
-                        <input onChange={handleInputValue}
-                            onLoad={(e) => e.target.value = 1}
-                            placeholder="Enter Quantity"
-                            className='input focus:outline-none input-bordered w-4/5' type="text" name="quantity" id="quantity" />
+                <div className='w-full md:w-2/6 mx-auto'>
+                        <select onChange={handleSelectScheme} className="select select-bordered w-full max-w-xs">
+                            <option disabled selected>Selete a Scheme</option>
+                            <option>Hourly</option>
+                            <option>Daily</option>
+                            <option>Monthly</option>
+                        </select>
                     </div>
-                    <div className='w-full md:w-2/5 mx-auto'>
-                        <h4 style={{ fontFamily: "Rajdhani" }} className='text-cyan-500 text-xl font-bold'> <span className="font-bold">Total: </span> <FontAwesomeIcon icon={faDollarSign} /> {totalPrice ? singleData?.price * totalPrice : singleData?.price}</h4>
+                    <div className='w-full md:w-2/6 mx-auto'>
+                        {
+                            ((slct === "Hourly") && <input onChange={handleInputValue}
+                            onLoad={(e) => e.target.value = 1}
+                            placeholder="Enter Total Hour"
+                            className='input focus:outline-none input-bordered w-4/5' type="text" name="quantity" id="quantity" />) ||
+                            ((slct === "Daily") && <input onChange={handleInputValue}
+                            onLoad={(e) => e.target.value = 1}
+                            placeholder="Enter Total Day"
+                            className='input focus:outline-none input-bordered w-4/5' type="text" name="quantity" id="quantity" />) ||
+                            ((slct === "Monthly") && <input onChange={handleInputValue}
+                            onLoad={(e) => e.target.value = 1}
+                            placeholder="Enter Total Month"
+                            className='input focus:outline-none input-bordered w-4/5' type="text" name="quantity" id="quantity" />)
+                        }
+                    </div>
+                    <div className='w-full md:w-2/6 mx-auto'>
+                        <h4 style={{ fontFamily: "Rajdhani" }} className='text-cyan-500 text-xl font-bold'> <span className="font-bold">Total: </span> <FontAwesomeIcon icon={faDollarSign} /> {totalPrice ? totalPrice : 0.00}</h4>
                     </div>
                 </div>
             </div>
@@ -154,7 +189,7 @@ const Booking = () => {
                                             <label className="relative cursor-pointer">
                                                 <input
                                                     type="text"
-                                                    value={totalPrice ? singleData?.price?.perMonth * totalPrice : singleData?.price?.perMonth}
+                                                    value={totalPrice ? totalPrice : 0.00}
                                                     placeholder="Input"
                                                     className="h-[50px]  bg-[#f3f3f3] w-full px-6 text-md border rounded outline-none focus:border-gray-700 focus:border-opacity-60 placeholder-gray-300 placeholder-opacity-0 transition duration-200"
                                                     name="price"
