@@ -13,7 +13,6 @@ const Booking = () => {
     const [isChecked, setIsChecked] = useState(false);
     const [slct, setSlct] = useState();
     const { data } = useServices();
-    // const [srv, setSrv] = useState();
     const [user] = useAuthState(auth);
 
     // console.log(data);
@@ -29,8 +28,8 @@ const Booking = () => {
     const Services = data?.data?.find(s => s?.id === Number(srvid));
     const singleData = Services?.provider?.find(s => s?.id === Number(id));
     // console.log(id, srvid);
-    console.log(Services);
-    console.log(singleData);
+    // console.log(Services);
+    // console.log(singleData);
 
     const handleSelectScheme = (e) => {
         const scheme = e.target.value;
@@ -66,14 +65,23 @@ const Booking = () => {
         const info = {
             service_name: singleData?.name,
             service_img: singleData?.img,
-            service_desc: singleData?.desc,
-            total_amount: (totalPrice ? singleData?.price * totalPrice : singleData?.price).toFixed(2),
+            service_desc: Services?.name,
+            total_amount: totalPrice,
             cus_name: user?.displayName,
             cus_email: user?.email
 
         }
+        const dta = {
+            peoviderName:singleData?.name,
+            providerImg:singleData?.img,
+            cus_name: user?.displayName,
+            cus_email: user?.email,
+            cus_phone:event.target.phone.value,
+            cus_address:event.target.address.value
 
-        console.log(info);
+        }
+
+        // console.log(dta);
 
         axios.post(`https://availbox-server.vercel.app/init`, info)
             .then(res => {
@@ -81,6 +89,11 @@ const Booking = () => {
                 if (res?.data) {
                     window.location = res?.data
                 }
+            })
+
+        axios.post(`https://availbox-server.vercel.app/hire`, dta)
+            .then(res => {
+                console.log(res);
             })
 
     };
@@ -206,7 +219,7 @@ const Booking = () => {
                                                     placeholder="Enter Your Contact Number"
                                                     required
                                                     className="h-[50px]  bg-[#f3f3f3] w-full px-6 text-md border rounded outline-none focus:border-gray-700 focus:border-opacity-60 placeholder-gray-400 placeholder-opacity-1 transition duration-200"
-                                                    name="name"
+                                                    name="phone"
                                                 />
                                                 <span className=" text-sm bg-transparent te text-opacity-80 absolute left-0 px-2 top-[-37px] transition duration-200 input-text">
                                                     Contact Number
@@ -217,10 +230,10 @@ const Booking = () => {
                                             <label className="relative cursor-pointer">
                                                 <input
                                                     type="text"
-                                                    placeholder="Enter Your Contact Number"
+                                                    placeholder="Enter Your Address"
                                                     required
                                                     className="h-[50px]  bg-[#f3f3f3] w-full px-6 text-md border rounded outline-none focus:border-gray-700 focus:border-opacity-60 placeholder-gray-400 placeholder-opacity-1 transition duration-200"
-                                                    name="price"
+                                                    name="address"
                                                 />
                                                 <span className=" text-sm bg-transparent te text-opacity-80 absolute left-0 px-2 top-[-37px] transition duration-200 input-text">
                                                     Address

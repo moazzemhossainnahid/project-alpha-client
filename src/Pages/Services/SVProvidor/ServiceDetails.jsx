@@ -12,7 +12,7 @@ const ServiceDetails = ({data, id}) => {
     return (
         <div data-aos="fade-up" class="card w-full m-auto shadow-lg">
             <figure className='p-5 rounded-2xl border-dotted border-indigo-500 border-2'>
-                <img src={providor?.img} alt="Images" />
+                <img className='h-40 w-full object-cover' src={providor?.img} alt="Images" />
             </figure>
             <div class="card-body flex justify-start items-center">
                 <h2 class="font-bold text-2xl text-center"> {providor?.name}</h2>
@@ -84,9 +84,9 @@ const ServiceDetails = ({data, id}) => {
                     <p className=""><span className="font-bold text-gray-500">Phone: </span>{providor?.phone}</p>
                     <span className="font-bold text-left text-gray-500">Expense: </span>
                     <div className="pl-5">
-                        <p className="font-semibold"><span className="font-bold text-gray-500">Per Hour: $</span>{providor?.price?.perHour}</p>
-                        <p className="font-semibold"><span className="font-bold text-gray-500">Per Day: $</span>{providor?.price?.perDay}</p>
-                        <p className="font-semibold"><span className="font-bold text-gray-500">Per Month: $</span>{providor?.price?.perMonth}</p>
+                        <p className="font-semibold"><span className="font-bold text-gray-500">Per Hour: $</span>{providor?.perHour}</p>
+                        <p className="font-semibold"><span className="font-bold text-gray-500">Per Day: $</span>{providor?.perDay}</p>
+                        <p className="font-semibold"><span className="font-bold text-gray-500">Per Month: $</span>{providor?.perMonth}</p>
                     </div>
 
                 </div>

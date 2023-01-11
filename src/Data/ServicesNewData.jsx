@@ -8,7 +8,7 @@ export const ServicesNewData = [
             {
                 id: 1,
                 name: "Munira Aktar",
-                img: "",
+                img: "https://i.ibb.co/VStRqcB/maid-1.jpg",
                 exp: 2,
                 idNo: "M0001",
                 phone: "+8801774XXXX04",
@@ -20,7 +20,7 @@ export const ServicesNewData = [
             {
                 id: 2,
                 name: "Sahazana Katun",
-                img: "",
+                img: "https://i.ibb.co/4YfwrK4/maid-2.jpg",
                 exp: 4,
                 idNo: "M0002",
                 phone: "+8801774XXXX04",
@@ -32,7 +32,7 @@ export const ServicesNewData = [
             {
                 id: 3,
                 name: "Nazmun Nahar",
-                img: "",
+                img: "https://i.ibb.co/VwCCJ7D/maid-3.jpg",
                 exp: 2,
                 idNo: "M0003",
                 phone: "+8801774XXXX04",
@@ -52,7 +52,7 @@ export const ServicesNewData = [
             {
                 id: 1,
                 name: "Nishi Dikha",
-                img: "",
+                img: "https://i.ibb.co/Gp5hgKx/nurse-1.webp",
                 exp: 3,
                 idNo: "N0001",
                 phone: "+8801774XXXX04",
@@ -64,7 +64,7 @@ export const ServicesNewData = [
             {
                 id: 2,
                 name: "Rifat Mishu",
-                img: "",
+                img: "https://i.ibb.co/j8PDMRQ/nurse-2.jpg",
                 exp: 5,
                 idNo: "N0002",
                 phone: "+8801774XXXX04",
@@ -76,7 +76,7 @@ export const ServicesNewData = [
             {
                 id: 3,
                 name: "Jui Tasnim",
-                img: "",
+                img: "https://i.ibb.co/N7QZCqn/nurse-3.webp",
                 exp: 2,
                 idNo: "N0003",
                 phone: "+8801774XXXX04",
@@ -96,7 +96,7 @@ export const ServicesNewData = [
             {
                 id: 1,
                 name: "Sharjina Asha",
-                img: "",
+                img: "https://i.ibb.co/jTBpKJr/gv-1.webp",
                 exp: 3,
                 idNo: "G0001",
                 phone: "+8801774XXXX04",
@@ -108,7 +108,7 @@ export const ServicesNewData = [
             {
                 id: 2,
                 name: "Nasiba Khan",
-                img: "",
+                img: "https://i.ibb.co/gW5gGsS/gv-2.webp",
                 exp: 5,
                 idNo: "G0002",
                 phone: "+8801774XXXX04",
@@ -120,7 +120,7 @@ export const ServicesNewData = [
             {
                 id: 3,
                 name: "Tuba Fardin",
-                img: "",
+                img: "https://i.ibb.co/S097kxC/gv-3.jpg",
                 exp: 2,
                 idNo: "G0003",
                 phone: "+8801774XXXX04",
@@ -140,7 +140,7 @@ export const ServicesNewData = [
             {
                 id: 1,
                 name: "Mithun Hasan",
-                img: "",
+                img: "https://i.ibb.co/0VGQQKc/cook-1.jpg",
                 exp: 3,
                 idNo: "C0001",
                 phone: "+8801774XXXX04",
@@ -152,7 +152,7 @@ export const ServicesNewData = [
             {
                 id: 2,
                 name: "Morium Begum",
-                img: "",
+                img: "https://i.ibb.co/cTW7NTF/cook-3.webp",
                 exp: 5,
                 idNo: "C0002",
                 phone: "+8801774XXXX04",
@@ -164,7 +164,7 @@ export const ServicesNewData = [
             {
                 id: 3,
                 name: "Ferdus Ara",
-                img: "",
+                img: "https://i.ibb.co/t2nWv42/cook-2.jpg",
                 exp: 1,
                 idNo: "C0003",
                 phone: "+8801774XXXX04",
@@ -184,7 +184,7 @@ export const ServicesNewData = [
             {
                 id: 1,
                 name: "Nabila Zannat",
-                img: "",
+                img: "https://i.ibb.co/87pygQR/bb-1.jpg",
                 exp: 3,
                 idNo: "B0001",
                 phone: "+8801774XXXX04",
@@ -196,7 +196,7 @@ export const ServicesNewData = [
             {
                 id: 2,
                 name: "Piyushi Thakur",
-                img: "",
+                img: "https://i.ibb.co/7KbP3zf/bb-2.jpg",
                 exp: 5,
                 idNo: "B0002",
                 phone: "+8801774XXXX04",
@@ -208,7 +208,7 @@ export const ServicesNewData = [
             {
                 id: 3,
                 name: "Shamima Kobir",
-                img: "",
+                img: "https://i.ibb.co/27fztN0/bb-3.jpg",
                 exp: 4,
                 idNo: "B0003",
                 phone: "+8801774XXXX04",
@@ -228,7 +228,7 @@ export const ServicesNewData = [
             {
                 id: 1,
                 name: "Zikrul Apon",
-                img: "",
+                img: "https://i.ibb.co/Ss38yZC/driver-1.webp",
                 exp: 3,
                 idNo: "D0001",
                 phone: "+8801774XXXX04",
@@ -240,7 +240,7 @@ export const ServicesNewData = [
             {
                 id: 2,
                 name: "Umme Kulsum",
-                img: "",
+                img: "https://i.ibb.co/M2H62MS/driver-2.jpg",
                 exp: 5,
                 idNo: "D0002",
                 phone: "+8801774XXXX04",
@@ -252,7 +252,7 @@ export const ServicesNewData = [
             {
                 id: 3,
                 name: "Rifat Rosid",
-                img: "",
+                img: "https://i.ibb.co/kBY9tCw/driver-3.jpg",
                 exp: 2,
                 idNo: "D0003",
                 phone: "+8801774XXXX04",
@@ -264,3 +264,14 @@ export const ServicesNewData = [
         ]
     }
 ]
+
+
+
+
+
+
+
+
+
+
+
