@@ -10,9 +10,9 @@ const ServiceDetails = ({data, id}) => {
     const ratings = providor?.rating;
 
     return (
-        <div data-aos="fade-up" class="card w-full m-auto shadow-lg">
+        <div data-aos="fade-up" class="card w-full bg-white hover:shadow-lg m-auto shadow-lg">
             <figure className='p-5 rounded-2xl border-dotted border-indigo-500 border-2'>
-                <img className='h-40 w-full object-cover' src={providor?.img} alt="Images" />
+                <img className='h-fit w-2/3 rounded-xl hover:shadow-lg hover:shadow-gray-700 duration-200 object-cover' src={providor?.img} alt="Images" />
             </figure>
             <div class="card-body flex justify-start items-center">
                 <h2 class="font-bold text-2xl text-center"> {providor?.name}</h2>
