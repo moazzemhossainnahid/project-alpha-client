@@ -44,11 +44,11 @@ const Booking = () => {
         if (value < 0) {
             alert('value can not be less than 0');
             value = 1;
-        }else if(slct === "Hourly"){
+        } else if (slct === "Hourly") {
             setTotalPrice(value * singleData?.perHour)
-        }else if(slct === "Daily"){
+        } else if (slct === "Daily") {
             setTotalPrice(value * singleData?.perDay)
-        }else if(slct === "Monthly"){
+        } else if (slct === "Monthly") {
             setTotalPrice(value * singleData?.perMonth)
         }
         else {
@@ -72,12 +72,12 @@ const Booking = () => {
 
         }
         const dta = {
-            peoviderName:singleData?.name,
-            providerImg:singleData?.img,
+            peoviderName: singleData?.name,
+            providerImg: singleData?.img,
             cus_name: user?.displayName,
             cus_email: user?.email,
-            cus_phone:event.target.phone.value,
-            cus_address:event.target.address.value
+            cus_phone: event.target.phone.value,
+            cus_address: event.target.address.value
 
         }
 
@@ -115,7 +115,7 @@ const Booking = () => {
                     </div>
                 </div>
                 <div className="flex flex-col md:flex-row gap-3 w-full md:w-4/5 mx-auto items-center justify-center">
-                <div className='w-full md:w-2/6 mx-auto'>
+                    <div className='w-full md:w-2/6 mx-auto'>
                         <select onChange={handleSelectScheme} className="select select-bordered w-full max-w-xs">
                             <option disabled selected>Selete a Scheme</option>
                             <option>Hourly</option>
@@ -126,17 +126,17 @@ const Booking = () => {
                     <div className='w-full md:w-2/6 mx-auto'>
                         {
                             ((slct === "Hourly") && <input onChange={handleInputValue}
-                            onLoad={(e) => e.target.value = 1}
-                            placeholder="Enter Total Hour"
-                            className='input focus:outline-none input-bordered w-4/5' type="text" name="quantity" id="quantity" />) ||
+                                onLoad={(e) => e.target.value = 1}
+                                placeholder="Enter Total Hour"
+                                className='input focus:outline-none input-bordered w-4/5' type="text" name="quantity" id="quantity" />) ||
                             ((slct === "Daily") && <input onChange={handleInputValue}
-                            onLoad={(e) => e.target.value = 1}
-                            placeholder="Enter Total Day"
-                            className='input focus:outline-none input-bordered w-4/5' type="text" name="quantity" id="quantity" />) ||
+                                onLoad={(e) => e.target.value = 1}
+                                placeholder="Enter Total Day"
+                                className='input focus:outline-none input-bordered w-4/5' type="text" name="quantity" id="quantity" />) ||
                             ((slct === "Monthly") && <input onChange={handleInputValue}
-                            onLoad={(e) => e.target.value = 1}
-                            placeholder="Enter Total Month"
-                            className='input focus:outline-none input-bordered w-4/5' type="text" name="quantity" id="quantity" />)
+                                onLoad={(e) => e.target.value = 1}
+                                placeholder="Enter Total Month"
+                                className='input focus:outline-none input-bordered w-4/5' type="text" name="quantity" id="quantity" />)
                         }
                     </div>
                     <div className='w-full md:w-2/6 mx-auto'>
@@ -249,7 +249,9 @@ const Booking = () => {
                                         <div className="py-3">
                                             <hr />
                                         </div>
-
+                                        <div className="">
+                                            <p className="">You have to pay <span className="font-bold">50%</span> or you can pay the full Payment.</p>
+                                        </div>
                                         <div className="py-4">
                                             <input
                                                 type="checkbox"
