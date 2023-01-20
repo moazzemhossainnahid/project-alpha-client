@@ -1,5 +1,4 @@
 import React from 'react';
-import Banner from '../Components/Banner';
 import ServicesBanner from './ServicesBanner';
 import ServicesCard from './ServicesCard';
 

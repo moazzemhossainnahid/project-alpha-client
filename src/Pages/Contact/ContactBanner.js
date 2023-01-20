@@ -3,7 +3,7 @@ import React from 'react';
 const ContactBanner = () => {
     return (
         <div>
-            <div className={` bg-[url('https://mobisoftinfotech.com/resources/wp-content/uploads/2018/08/Banner.png')] bg-cover h-[500px] relative bg-no-repeat flex items-center  `}>
+            <div className={` bg-[url('https://i.ibb.co/sQfLK62/businessman-touching-virtual-screen.jpg')] bg-cover h-[520px] relative bg-no-repeat flex items-center  `}>
 
             </div>
         </div>

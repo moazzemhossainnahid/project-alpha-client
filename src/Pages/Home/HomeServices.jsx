@@ -24,7 +24,7 @@ const HomeServices = () => {
                                     <div className="h-16 pt-5">
                                         <p className="text-sm font-semibold text-neutral text-justify">{product?.desc.slice(0, 150)}</p>
                                     </div>
-                                    <h3 className="text-md font-bold text-primary">Price: <FontAwesomeIcon icon={faBangladeshiTakaSign} /> {product?.price}/Mo</h3>
+                                    {/* <h3 className="text-md font-bold text-primary">Price: <FontAwesomeIcon icon={faBangladeshiTakaSign} /> {product?.price}/Mo</h3> */}
                                 </div>
                             </div>
                         ))

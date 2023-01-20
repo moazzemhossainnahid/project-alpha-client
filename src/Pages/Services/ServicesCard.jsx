@@ -21,10 +21,10 @@ const ServicesCard = () => {
                         {
                             Services?.map(service => (
                                 <div key={service?.id} className="flex  items-center justify-around sm:flex-col md:flex-row gap-4 lg:gap-0">
-                                        <div className="md:w-40 lg:w-60 w-3/4 lg:h-60 md:h-40 h-72 lg:flex-shrink-0 md:flex-shrink-0   bg-transparent cursor-pointer group perspective">
+                                        <div className="md:w-44 lg:w-72 w-3/4 lg:h-60 md:h-40 h-72 lg:flex-shrink-0 md:flex-shrink-0   bg-transparent cursor-pointer group perspective">
                                             <div className="relative preserve-3d group-hover:my-rotate-y-180 w-full h-full duration-1000 object-contain">
-                                                <div className="absolute backface-hidden   w-full h-full">
-                                                    <div onClick={() => navigate(`/booking/${service?.id}`)} className="h-full w-full relative">
+                                                <div className="absolute backface-hidden w-full h-full">
+                                                    <div onClick={() => navigate(`/service/${service?.id}`)} className="h-full w-full relative">
                                                         <img
                                                             src={service?.img}
                                                             className="w-full h-full rounded-lg " alt=''
@@ -41,17 +41,17 @@ const ServicesCard = () => {
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div onClick={() => navigate(`/booking/${service?.id}`)} className="absolute hover:shadow-lg my-rotate-y-180 backface-hidden rounded-lg w-full h-full bg-gray-700 overflow-hidden">
+                                                <div onClick={() => navigate(`/service/${service?.id}`)} className="absolute hover:shadow-lg my-rotate-y-180 backface-hidden rounded-lg w-full h-full bg-gray-700 overflow-hidden">
                                                     <div className="h-full w-full relative">
                                                         {/* <img src="https://themes-themegoods.b-cdn.net/coursector/wp-content/uploads/2019/04/creative-business-people-working-on-business-WGCU95A-768x512.jpg"
                                                     className="w-full h-full" alt=''
                                                     /> */}
-                                                        <div onClick={() => navigate(`/booking/${service?.id}`)} className="w-full h-full p-2 absolute top-0 bg-opacity-30 rounded-lg bg-black flex flex-col space-y-2 items-center justify-center">
+                                                        <div onClick={() => navigate(`/service/${service?.id}`)} className="w-full h-full p-2 absolute top-0 bg-opacity-30 rounded-lg bg-black flex flex-col space-y-2 items-center justify-center">
                                                             <h1 style={{ fontFamily: "Rajdhani" }} className="text-info text-3xl font-bold font-mono">
                                                                 {service?.name}
                                                             </h1>
                                                             <p className="text-sm text-white">{service?.desc}</p>
-                                                            <button onClick={() => navigate(`/booking/${service?.id}`)} className="btn btn-outline btn-info px-7 ">Click to Hire</button>
+                                                            <button onClick={() => navigate(`/service/${service?.id}`)} className="btn btn-outline btn-info px-7 ">View all Provider</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -63,7 +63,7 @@ const ServicesCard = () => {
                     </div>
                 </div>
             </div>
-            <div className="divider w-full  md:w-5/6 m-auto opacity-30"></div>
+            <div className="divider w-full md:w-5/6 m-auto opacity-30"></div>
         </div>
     );
 };
